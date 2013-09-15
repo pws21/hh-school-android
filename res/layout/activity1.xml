@@ -1,0 +1,133 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/MainWindow" >
+
+    <RelativeLayout style="@style/MainWindowHeader" >
+
+        <ImageView style="@style/MainWindowHeaderImage" android:contentDescription="@null"/>
+    </RelativeLayout>
+
+    <ScrollView style="@style/MainWindowScroller" android:id="@+id/scroller1">
+
+        <RelativeLayout
+            style="@style/MainWindowContent"
+            tools:context=".ResumeActivity" >
+
+            <TextView
+                android:id="@+id/wellcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/wellcome_resume"
+                android:layout_marginBottom="@dimen/DefaultMargin"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+            
+            <EditText
+                android:id="@+id/fullNameEdit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/wellcome"
+                android:ems="10"
+                android:hint="@string/fio_hint"
+                android:inputType="textCapWords|textPersonName" >
+
+                <requestFocus />
+            </EditText>
+
+            <EditText
+                android:id="@+id/birthDayEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/fullNameEdit"
+                android:layout_alignRight="@+id/fullNameEdit"
+                android:layout_below="@+id/fullNameEdit"
+                android:ems="10"
+                android:hint="@string/date_hint" />
+
+            <Spinner
+                android:id="@+id/sexSpinner"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/birthDayEdit"
+                android:layout_alignRight="@+id/fullNameEdit"
+                android:layout_below="@+id/birthDayEdit"
+                android:layout_marginBottom="@dimen/DefaultMargin"
+                android:layout_marginTop="@dimen/DefaultMargin"
+                android:entries="@array/spinner_sex"
+                android:prompt="@string/sex" />
+
+            <EditText
+                android:id="@+id/positionEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/fullNameEdit"
+                android:layout_alignRight="@id/fullNameEdit"
+                android:layout_below="@+id/sexSpinner"
+                android:layout_marginBottom="@dimen/DefaultMargin"
+                android:layout_marginTop="@dimen/DefaultMargin"
+                android:ems="10"
+                android:hint="@string/position"
+                android:inputType="text|textCapSentences" />
+
+            <EditText
+                android:id="@+id/salaryEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/positionEdit"
+                android:layout_alignRight="@+id/positionEdit"
+                android:layout_below="@+id/positionEdit"
+                android:layout_marginBottom="@dimen/DefaultMargin"
+                android:layout_marginTop="@dimen/DefaultMargin"
+                android:ems="10"
+                android:hint="@string/salary_hint"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/phoneEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/salaryEdit"
+                android:layout_alignRight="@+id/salaryEdit"
+                android:layout_below="@+id/salaryEdit"
+                android:layout_marginBottom="@dimen/DefaultMargin"
+                android:layout_marginTop="@dimen/DefaultMargin"
+                android:ems="10"
+                android:hint="@string/phone_hint"
+                android:inputType="phone" />
+
+            <EditText
+                android:id="@+id/emailEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/phoneEdit"
+                android:layout_alignRight="@+id/phoneEdit"
+                android:layout_below="@+id/phoneEdit"
+                android:layout_marginTop="@dimen/DefaultMargin"
+                android:ems="10"
+                android:hint="@string/email_hint"
+                android:inputType="textAutoComplete|textEmailAddress" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/phoneEdit"
+                android:layout_alignRight="@+id/phoneEdit"
+                android:layout_below="@+id/emailEdit"
+                android:layout_marginTop="@dimen/DefaultMargin" >
+
+                <Button
+                    android:id="@+id/sendButton"
+                    style="@style/GrandButton"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:text="@string/send_resume" />
+            </RelativeLayout>
+
+            
+
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">hh-school-android</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="fio_hint">ФИО</string>
+    <string-array name="spinner_sex">
+        <item >мужчина</item>
+        <item >женщина</item>
+    </string-array>
+    <string name="date_hint">Дата рождения</string>
+    <string name="sex">Пол</string>
+    <string name="position">Желаемая должность</string>
+    <string name="salary_hint">Зарплата</string>
+    <string name="phone_hint">Телефон</string>
+    <string name="email_hint">E-mail</string>
+    <string name="send_resume">Отправить резюме</string>
+    <string name="response_title">Ответ от работодателя</string>
+    <string name="alert_dialog_ok">OK</string>
+    <string name="wellcome_resume">Расскажите о себе</string>
+    <string name="response">Ответ</string>
+    <string name="send_response">Отправить ответ</string>
+    <string name="no_email_client">Извините, похоже у вас не установлен Email клиент.</string>
+    <string name="dflt_subject">Отклик на резюме</string>
+    <string name="value_required">Обязательное поле</string>
+
+</resources>

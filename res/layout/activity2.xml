@@ -1,0 +1,186 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/MainWindow" >
+
+    <RelativeLayout style="@style/MainWindowHeader" >
+
+        <ImageView style="@style/MainWindowHeaderImage" android:contentDescription="@null" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scroller2"
+        style="@style/MainWindowScroller" >
+
+
+        <RelativeLayout
+            style="@style/MainWindowContent"
+            android:padding="16dp"
+            android:focusableInTouchMode="true"
+            tools:context=".CompanyActivity" >
+
+            <TableLayout
+                android:id="@+id/table1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:stretchColumns="*"
+                android:padding="8dp" >
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/fullNameText"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+                <TableRow android:id="@+id/rowPosition"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/positionText"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </TableRow>
+
+                <TableRow android:id="@+id/rowSalary"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/salary_hint" />
+
+                    <TextView
+                        android:id="@+id/salaryText"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                </TableRow>
+
+                <TableRow android:id="@+id/rowSex"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sex" />
+
+                    <TextView
+                        android:id="@+id/sexText"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                </TableRow>
+
+                <TableRow android:id="@+id/rowBirth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/date_hint" />
+
+                    <TextView
+                        android:id="@+id/birthText"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                </TableRow>
+            </TableLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_below="@+id/table1"
+                android:background="@drawable/textlines" />
+
+            <Button
+                android:id="@+id/makeCall"
+                style="@style/ImplicitButton"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/table1"
+                android:drawableLeft="@drawable/black_phone"/>
+
+            <View android:id="@+id/lineBelowCall"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_below="@+id/makeCall"
+                android:background="@drawable/textlines" />
+
+            <Button
+                android:id="@+id/makeMail"
+                style="@style/ImplicitButton"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/makeCall"
+                android:layout_marginTop="1dp"
+                android:drawableLeft="@drawable/black_mail"
+                />
+
+            <View android:id="@+id/lineBelowMail"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_below="@+id/makeMail"
+                android:background="@drawable/textlines" />
+
+            <TextView
+                android:id="@+id/responseTitle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/makeMail"
+                android:layout_marginBottom="@dimen/DefaultMargin"
+                android:layout_marginLeft="@dimen/DefaultMargin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="@string/response"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/responseEdit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/responseTitle"
+                android:layout_below="@+id/responseTitle"
+                android:ems="10"
+                android:gravity="top|left"
+                android:inputType="textMultiLine"
+                android:lines="7"
+                android:maxLines="10"
+                android:minLines="5" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/responseEdit"
+                android:layout_marginTop="@dimen/DefaultMargin" >
+
+                <Button
+                    android:id="@+id/replyButton"
+                    style="@style/GrandButton"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:text="@string/send_response" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

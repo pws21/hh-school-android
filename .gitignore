@@ -1,0 +1,5 @@
+.settings
+# ignore all in bin directory
+bin/*
+
+# except this             
